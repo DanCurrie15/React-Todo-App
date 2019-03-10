@@ -2,6 +2,10 @@ body {
     background-color: whitesmoke;
 }
 
+h1 {
+  text-align: center;
+}
+
 .todo-list {
     background-color: white;
     margin: auto;
@@ -35,6 +39,11 @@ body {
     font-weight: 100;
     font-size: 15px;
     color: #333333;
+}
+
+.completedStyle {
+  color: #cdcdcd;
+  text-decoration: line-through;
 }
 
 input[type=checkbox] {
