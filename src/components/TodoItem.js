@@ -4,8 +4,11 @@ class TodoItem extends Component {
   render() {
     return(
       <div className="todo-item">
-        <input type="checkbox" />
-        <p>Placeholder text here</p>
+        <input type="checkbox"
+               checked={this.props.todoInfo.completed}
+               onChange={() => this.props.handleChange(this.props.todoInfo.id)}
+            />
+        <p>{this.props.todoInfo.text}</p>
       </div>
     );
   }
