@@ -13,13 +13,16 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(id) {
+  handleChange(id, type, value) {
     this.setState(prevState => {
       const updatedTodos = prevState.todos.map(todo => {
-        if (todo.id === id) {
+        if (todo.id === id && type === "checkbox") {
           todo.completed = !todo.completed;
         }
-        return todo
+        if (todo.id === id && type === "text") {
+          todo.text = value;
+        }
+        return todo;
       });
       return {
         todos: updatedTodos

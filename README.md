@@ -1,6 +1,7 @@
 # Simple Todo List App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Also made by following (https://scrimba.com/playlist/p7P5Hd)
 
 ## How to use
 

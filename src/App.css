@@ -44,6 +44,7 @@ h1 {
 .completedStyle {
   color: #cdcdcd;
   text-decoration: line-through;
+  pointer-events: none;
 }
 
 input[type=checkbox] {

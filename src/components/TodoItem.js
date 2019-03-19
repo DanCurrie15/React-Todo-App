@@ -7,9 +7,13 @@ class TodoItem extends Component {
       <div className="todo-item">
         <input type="checkbox"
                checked={this.props.todoInfo.completed}
-               onChange={() => this.props.handleChange(this.props.todoInfo.id)}
+               onChange={() => this.props.handleChange(this.props.todoInfo.id, "checkbox")}
             />
-        <p className={this.props.todoInfo.completed ? "completedStyle": null}>{this.props.todoInfo.text}</p>
+        <input type="text"
+               className={this.props.todoInfo.completed ? "completedStyle": null}
+               value= {this.props.todoInfo.text}
+               onChange={(event) => this.props.handleChange(this.props.todoInfo.id, "text", event.target.value)}
+            />
       </div>
     );
   }
