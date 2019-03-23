@@ -43,12 +43,30 @@ class App extends Component {
     });
   }
 
+  addItem = () => {
+    this.setState(prevState => {
+      const updatedTodos = prevState.todos;
+      let nextId = Math.max.apply(Math,updatedTodos.map(todo => {
+        return todo.id;
+      })) + 1;
+      if (nextId < 1) {
+        nextId = 1;
+      }
+      updatedTodos.push({id: nextId, text: "", completed: false});
+      console.log(updatedTodos);
+      return {
+        todos: updatedTodos
+      }
+    });
+  }
+
   render() {
     const todoComponent = this.state.todos.map(item => <TodoItem key={item.id}  todoInfo={item}
       handleChange={this.handleChange} handleClick={this.handleClick}/>);
     return (
       <div className="todo-list">
         {todoComponent}
+        <button onClick= {() => this.addItem()}>Add Item</button>
       </div>
     );
   }
