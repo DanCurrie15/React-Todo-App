@@ -7,7 +7,8 @@ Also made by following (https://scrimba.com/playlist/p7P5Hd)
 
 -Click boxes to check or uncheck<br>
 -You can change the text on each line when the check boxes are not checked<br>
--Click remove to delete item from todo list
+-Click remove to delete item from todo list<br>
+-Click add item to add a blank item to the list
 
 ## Available Scripts
 
