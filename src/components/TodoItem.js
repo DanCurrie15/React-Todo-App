@@ -14,6 +14,7 @@ class TodoItem extends Component {
                value= {this.props.todoInfo.text}
                onChange={(event) => this.props.handleChange(this.props.todoInfo.id, "text", event.target.value)}
             />
+        <button onClick={() => this.props.handleClick(this.props.todoInfo.id)}>Remove</button>
       </div>
     );
   }

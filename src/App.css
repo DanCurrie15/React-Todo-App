@@ -47,6 +47,10 @@ h1 {
   pointer-events: none;
 }
 
+input[type=text] {
+  width: 85%;
+}
+
 input[type=checkbox] {
     margin-right: 10px;
     font-size: 30px;

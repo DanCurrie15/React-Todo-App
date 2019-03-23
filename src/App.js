@@ -6,14 +6,13 @@ import todosData from './todosData.js';
 class App extends Component {
 
   constructor() {
-    super()
+    super();
     this.state = {
       todos: todosData
     }
-    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(id, type, value) {
+  handleChange = (id, type, value) => {
     this.setState(prevState => {
       const updatedTodos = prevState.todos.map(todo => {
         if (todo.id === id && type === "checkbox") {
@@ -30,9 +29,23 @@ class App extends Component {
     });
   }
 
+  handleClick = (id) => {
+    this.setState(prevState => {
+      const updatedTodos = prevState.todos.filter(todo => {
+        if (todo.id !== id ) {
+          return todo;
+        }
+        return null
+      });
+      return {
+        todos: updatedTodos
+      }
+    });
+  }
+
   render() {
     const todoComponent = this.state.todos.map(item => <TodoItem key={item.id}  todoInfo={item}
-      handleChange={this.handleChange}/>);
+      handleChange={this.handleChange} handleClick={this.handleClick}/>);
     return (
       <div className="todo-list">
         {todoComponent}

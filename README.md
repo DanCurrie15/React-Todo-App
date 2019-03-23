@@ -1,11 +1,13 @@
 # Simple Todo List App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br>
 Also made by following (https://scrimba.com/playlist/p7P5Hd)
 
 ## How to use
 
-Click boxes to check or uncheck
+-Click boxes to check or uncheck<br>
+-You can change the text on each line when the check boxes are not checked<br>
+-Click remove to delete item from todo list
 
 ## Available Scripts
 
